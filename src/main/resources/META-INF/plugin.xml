@@ -1,0 +1,40 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.vinist.faker-data</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Faker-data</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="haodi0312@163.com" url="">Vinsit</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Faker-data, in the coding process need to use some virtual data to test the code, this plug-in can help developers randomly generate virtual data.<br>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        <group id="FakerData" text="FakerData" popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="last" />
+            <action id="FakerUUIDAction" class="com.vinist.fakerdata.actions.FakerUUIDAction" text="UUID" />
+            <action id="FakerPhoneNumberAction" class="com.vinist.fakerdata.actions.FakerPhoneNumberAction" text="电话号码" />
+            <action id="FakerAssignIdAction" class="com.vinist.fakerdata.actions.FakerAssignIdAction" text="AssignID" />
+            <action id="FakerNameAction" class="com.vinist.fakerdata.actions.FakerNameAction" text="姓名" />
+            <action id="FakerEmailAction" class="com.vinist.fakerdata.actions.FakerEmailAction" text="邮箱" />
+            <action id="FakerAddressAction" class="com.vinist.fakerdata.actions.FakerAddressAction" text="地址" />
+        </group>
+    </actions>
+</idea-plugin>
