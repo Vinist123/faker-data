@@ -15,6 +15,7 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
     Faker-data, in the coding process need to use some virtual data to test the code, this plug-in can help developers randomly generate virtual data.<br>
+    Right-click the single mouse in the editor window, find the "FakerData" option in the menu, click the required data type, you can insert virtual data at the current cursor position.<br>
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
